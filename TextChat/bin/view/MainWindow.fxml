@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="560.0" prefWidth="330.0" style="-fx-background-color: #276d07;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <ImageView fx:id="profilePicture" fitHeight="49.0" fitWidth="55.0" layoutX="4.0" layoutY="2.0" onMouseClicked="#handleUploadButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://i.imgur.com/wecnDfl.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="288.0" layoutY="516.0" onMouseClicked="#handleSendEvent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://i.imgur.com/do1t03s.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="clientName" alignment="CENTER" layoutX="79.0" layoutY="13.0" prefHeight="24.0" prefWidth="181.0" text="Username" textAlignment="CENTER" textFill="#e1ffdb" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="msgRoom" editable="false" layoutY="52.0" prefHeight="456.0" prefWidth="340.0" style="-fx-background-color: #b8cbaf;" styleClass="text-area" wrapText="true">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="msgField" layoutX="7.0" layoutY="516.0" onKeyPressed="#sendMessageByKey" prefHeight="38.0" prefWidth="274.0" promptText="Type..." styleClass="msgBox">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
